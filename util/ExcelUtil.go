@@ -22,7 +22,7 @@ func WriteToExcel(filePath string, fileName string, columns []string, totalValue
 	f, err := os.Create(excelFile)
 	defer func() {
 		if f != nil {
-			f.Close()
+			_ = f.Close()
 		}
 	}()
 

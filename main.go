@@ -20,13 +20,13 @@ var (
 	// 2020-05-11 业务方报表数据
 	// 业务方报表数据邮箱主题
 	businessStatementTaskTitle = "业务方报表数据"
-	// 导出黑名单废弃资源SQL文件
+	// 业务方报表数据(每天上午9点执行)SQL文件
 	businessStatementFileName = "业务方报表数据(每天上午9点执行).sql"
-	// 业务方报表数据邮箱收件人, 支持一个和多个邮箱
+	// 业务方报表数据邮箱收件人, 支持一个和多个邮箱群发
 	businessStatementMailTo = []string{
 		"12345@qq.com",
 		"23456@163.com",
-		"34567@sina.com",
+		"34567@qq.com",
 	}
 )
 
@@ -60,7 +60,7 @@ func businessStatement() {
 	util.Execute(businessStatementTaskTitle, filePath, businessStatementFileName, businessStatementMailTo)
 }
 
-// 定时删除7天以外的报表文件
+// 定时删除7天以前的报表文件
 func cleanResultFiles() {
 	rd, _ := ioutil.ReadDir(filePath)
 	for _, fi := range rd {

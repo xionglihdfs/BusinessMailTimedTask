@@ -22,7 +22,7 @@ func WriteToCSV(filePath string, fileName string, columns []string, totalValues 
 	f, err := os.Create(csvFile)
 	defer func() {
 		if f != nil {
-			f.Close()
+			_ = f.Close()
 		}
 	}()
 
