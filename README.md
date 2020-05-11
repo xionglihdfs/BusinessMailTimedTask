@@ -12,7 +12,7 @@
 ### 4.执行windows部署文件deploy.bat, 在项目目录下生产main文件;
 ### 5.将main文件传到Linux下, 依赖的文件夹, config/, result/, sql/ 一并放在main目录下, 这里需要编辑 config/config.properties 为真实数据库配置, smtp也能使用即可, 授予main执行权限, 然后 ./main 运行项目.
 
-## 目的: 为DBA开发一套能定时发送报表邮件或者监控数据的系统, 后期还会不断扩充功能, 有问题请加微信沟通, 或者直接留言给我.
+## 目的: 为DBA开发一套能定时发送报表邮件或者监控数据的系统, 后期还会不断扩充功能, 有问题请加微信沟通, 或者直接留言.
 
-
+![image](https://github.com/xionglihdfs/BusinessMailTimedTask/blob/master/doc/%E7%86%8A%E7%86%8A.png)
 
